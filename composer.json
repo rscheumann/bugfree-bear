@@ -1,0 +1,18 @@
+{
+    "name": "rscheumann/bugfree-bear",
+    "description": "Bugfree bear",
+    "keywords": ["PaulDevelop", "library"],
+    "homepage": "https://github.com/rscheumann/bugfree-bear",
+    "type": "library",
+    "license": "PDL",
+    "authors": [
+        {
+            "name": "Rüdiger Scheumann",
+            "email": "info@pauldevelop.de",
+            "homepage": "http://pauldevelop.de"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
