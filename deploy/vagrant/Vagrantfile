@@ -1,0 +1,15 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "precise32"
+  config.vm.network :public_network, :bridge => "en1: Wi-Fi (AirPort)"
+  config.vm.network :forwarded_port, guest: 80, host: 8094
+  config.vm.synced_folder ".", "/vagrant", :disabled => true
+  config.vm.synced_folder "../..", "/home/vagrant/project/", :mount_options => ["dmode=777,fmode=777"]
+  config.vm.provision :shell, :path => "provision.sh"
+
+  config.vm.provider :virtualbox do |vb|
+    vb.name = "bugfree-bear"
+  end
+end
